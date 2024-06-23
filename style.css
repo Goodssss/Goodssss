@@ -10,6 +10,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
 html{
@@ -60,6 +61,7 @@ header .navbar {
   color: #fbfbfb;
   height: 70px;
   width: auto;
+  padding-left: 50px;
   font-size: 2.1rem;
   text-decoration: none;
   display: flex;
@@ -206,7 +208,7 @@ header .navbar {
 
 .hero-section .content {
   max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 70px;
   width: 100%;
   color: #fff;
 }
@@ -230,12 +232,13 @@ header .navbar {
   --glow-color:  rgb(241, 188, 117);
  --glow-spread-color:  rgb(222,188,143);
  --enhanced-glow-color:  rgb(235, 180, 109);
- --btn-color: none;
+ --btn-color: black;
  border: .25em solid var(--glow-color);
  padding: 1em 3em;
  color: var(--glow-color);
  margin-top: 20px;
  margin-right: 20px;
+ text-transform: uppercase;
  font-size: 15px;
  font-weight: bold;
  background-color: var(--btn-color);
@@ -282,26 +285,17 @@ header .navbar {
 
 .buttons{
   font-family: Ailerons;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 
 .started-button{
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 50px;
-  left: 0;
-  font-size: 100px;
-  text-transform: uppercase;
+  width: 200px;
+  background-color: black;
  
 }
 
-.started-button a{
-
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
 
 .login-button {
   display: none;
@@ -335,191 +329,13 @@ header .navbar {
   0% { opacity: 0; }
 }
 
-.services{
-  min-height: 90vh;
-  max-width: 100%;
-  padding-left: 70px;
-  padding-right: 70px;
-}
-
-.services.active{
-    filter: blur(20px);
-}
-
-
-.services h1{
-  text-align: center;
-  font-size: 3em;
-  margin-top: 40px;
-}
-
-.container .heading{
-  text-align: center;
-  padding-bottom: 15px;
-  color:#fff;
-  text-shadow: 0 5px 10px rgba(0,0,0,.2);
-  font-size: 50px;
-}
-
-.container .box-container{
-  cursor:pointer;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  position: relative;
-  margin-top: 50px;
-  gap:15px;
-}
-
-.container .box-container .box{
-  box-shadow: 0 5px 10px rgba(0,0,0,.2);
-  border-radius: 5px;
-  /* background: linear-gradient(#b16d33, #c8956d, #e4c9b4, #f6ede6); */
-  text-align: center;
-  padding:30px 20px;
-}
-
-.container .box-container .box img{
-  height: 200px;
-  border-radius: 10px;
-  z-index: -10;
-}
-
-
-.container .box-container .box h3{
-  color:#444;
-  font-size: 22px;
-  padding:10px 0;
-}
-
-.container .box-container .box p{
-  color:#777;
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.container .box-container .box a{
-  text-decoration: none;
-}
-
-.container .box-container .box .btn{
-  margin-top: 10px;
-  display: inline-block;
-  background:#333;
-  color:#fff;
-  font-size: 17px;
-  border-radius: 5px;
-  padding: 8px 25px;
-}
-
-.container .box-container .box .btn:hover{
-  letter-spacing: 1px;
-}
-
-.container .box-container .box:hover{
-  box-shadow: 0 10px 15px rgba(0,0,0,.3);
-  transition: all 0.5s ease;
-  transform: scale(1.03);
-}
-
-
-
-.requisition-form-container{
-  position: fixed ;
-  top: 15%;
-  left: 40%;
-  height: 650px;
-  width: 450px;
-  padding: 10px 20px 10px 20px ;
-  border-radius: 20px;
-  background-color: white;
-  transform: translate(-50% -50%);
-  box-shadow: 10px 5px 30px gray ;
-  visibility: hidden;
-  opacity: 0;
-  filter: none;
-  transition: 0.5s;
-  z-index: 9999;
-}
-
-.requisition-form-container h2{
-  padding-top: 20px;
-  text-align: center;
-}
-
-::placeholder{
-
-  opacity: 1;
-}
-
-
-.requisition-form input{
-  height: 40px;
-  width: 100% ;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: 1px solid ;
-  padding-left: 10px;
-  font-size: 1em;
-}
-
-
-.name{
-  margin-top: 10px;
-
-}
-.name input{
-  
-  width: 45%;
-  display: inline-flex;
-}
-
-#first-name{
-  float: right;
-}
-
-.requisition-form textarea{
-  padding-top: 10px;
-  padding-left: 10px;
-  margin-top:10px;
-  width: 100%;
-  font-size: 1em;
-}
-
-.requisition-form-btns{
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  
-}
-
-.requisition-form-btns button{
-  cursor: pointer;
-  font-size: 1em;
-  padding: 8px 20px ;
-  outline: none;
-  border-radius: 10px;
-  border:none;
-  background:rgb(244, 194, 130);
-}
- 
-.requisition-form-btns button:hover:active{
-  background-color: rgb(243, 208, 163);
-  
-}
-
-#popup.active{
-  visibility: visible;
-  opacity: 1;
-  transition: 0.5s;
-}
-
 
 /* Base styles for footer */
 footer {
   background: #2C2C2C;
   padding-top: 50px;
   margin-top: 50px;
-  color: white;
+  color: hsl(0, 0%, 100%), 0%, 100%;
 }
 
 .footer-container {
@@ -602,7 +418,7 @@ footer {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1087px) {
   header {
     padding: 10px;
   }
@@ -674,7 +490,7 @@ footer {
 
 .navbar a:hover{
   color:  rgb(238, 238, 237);;
-}
+  }
   
   .hero-section .content .buttons  {
     display: flex;
@@ -690,7 +506,11 @@ footer {
       display: none;
   }
 
-
+  .requisition-form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
   .hero-section .content :is(h2, p) {
     max-width: 100%;
     text-align: center;
@@ -721,6 +541,7 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
+    
   .leftnavbar span{
     opacity: 0;
   }
@@ -761,22 +582,26 @@ footer {
   
   }
 
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
   .box{
     width: 270px;
   }
 
   .requisition-form-container{
-    width: 95%;
+    width: 80%;
     height: auto;
     position: fixed;
-    top: 60px;
-    left: 0px;
+    top: 120px;
+    left: 50%;
     margin-left: 10px;
     
   }
-  .requisition-form-container h2{
-    font-size: 1.5em;
-  }
+ 
   .footer-content{
     display: block;
     width: 100%;
